@@ -55,7 +55,7 @@ var styles = StyleSheet.create({
   },
   actionText: {
     color: '#fff',
-    fontSize: 16,
+    fontSize: 22,
     textAlign: 'center',
   },
   textInput: {
@@ -67,7 +67,11 @@ var styles = StyleSheet.create({
     backgroundColor: constants.actionColor,
     borderColor: 'transparent',
     borderWidth: 1,
-    height:50,
+    borderRadius: 3,
+    marginLeft: 25,
+    marginRight: 25,
+    marginTop: 25,
+    height:60,
     justifyContent: 'center'
   },
 })
