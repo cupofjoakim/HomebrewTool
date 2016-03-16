@@ -58,7 +58,7 @@ class CalorieCalculatorScreen extends Component {
           <TextInput
             style={{height: 40, borderColor: 'gray', borderWidth: 1}}
             keyboardType='numeric'
-            onChangeText={(og) => this.setState({fg})}
+            onChangeText={(fg) => this.setState({fg})}
             value={this.state.fg}
           />
 
