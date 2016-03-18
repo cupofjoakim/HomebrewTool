@@ -15,22 +15,49 @@ var styles = StyleSheet.create({
   flexer: {
     flex: 1,
   },
-  li: {
-    backgroundColor: '#fff',
-    borderBottomColor: '#eee',
-    borderColor: 'transparent',
-    borderWidth: 1,
-    paddingLeft: 16,
-    paddingTop: 14,
-    paddingBottom: 16,
+  numberpickerOuter: {
+    flexDirection: 'row',
+    height: 120,
+    alignItems: 'center',
   },
-  liContainer: {
-    flex: 2,
+  numberpicker: {
+    marginLeft: 25,
+    marginRight: 25,
+    flexDirection: 'column',
+    flexWrap: 'wrap',
+    justifyContent: 'flex-start',
+    //alignSelf: 'flex-start',
+    alignItems: 'flex-start',
   },
-  liText: {
-    color: '#333',
-    fontSize: 16,
+  numberpickerButton: {
+    width: 120,
+    backgroundColor: constants.actionColor,
+    height: 40,
   },
+  numberpickerValue: {
+    width: 120,
+    height: 40,
+  },
+  numberpickerContainer: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+  },
+  // li: {
+  //   backgroundColor: '#fff',
+  //   borderBottomColor: '#eee',
+  //   borderColor: 'transparent',
+  //   borderWidth: 1,
+  //   paddingLeft: 16,
+  //   paddingTop: 14,
+  //   paddingBottom: 16,
+  // },
+  // liContainer: {
+  //   flex: 2,
+  // },
+  // liText: {
+  //   color: '#333',
+  //   fontSize: 16,
+  // },
   navbar: {
     alignItems: 'center',
     backgroundColor: '#fff',
