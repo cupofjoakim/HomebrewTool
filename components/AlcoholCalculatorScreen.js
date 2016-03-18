@@ -11,6 +11,7 @@ import React, {
 } from 'react-native';
 
 const styles = require('../styles.js');
+const Storer = require('../data/storer.js');
 
 /* Components */
 const StatusBar = require('./StatusBar');
@@ -20,12 +21,20 @@ class AlcoholCalculatorScreen extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      og: "1.065",
-      fg: "1.010",
       abv: "0"
     };
   }
-  componentDidMount() {
+  componentWillMount() {
+    let og = Storer.getValue('og');
+    let fg = Storer.getValue('fg');
+
+    this.setState({
+      'og': og,
+      'fg': fg
+    }, function(){
+      this._calculate();      
+    });
+
     return;
   }
   _calculate() {
@@ -45,22 +54,7 @@ class AlcoholCalculatorScreen extends Component {
         <View style={styles.flexer}>
 
           <ActionButton title="Go Back" onPress={this._pop.bind(this)} />
-          <Text>OG</Text>
-          <TextInput
-            style={{height: 40, borderColor: 'gray', borderWidth: 1}}
-            keyboardType='numeric'
-            onChangeText={(og) => this.setState({og})}
-            value={this.state.og}
-          />
-          <Text>FG</Text>
-
-          <TextInput
-            style={{height: 40, borderColor: 'gray', borderWidth: 1}}
-            keyboardType='numeric'
-            onChangeText={(og) => this.setState({fg})}
-            value={this.state.fg}
-          />
-
+        
           <Text>calculated abv: {this.state.abv}%</Text>
 
         </View>
